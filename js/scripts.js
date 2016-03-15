@@ -4,11 +4,19 @@ function Contact(first, last, email, phone) {
   this.lastName = last;
   this.emailAddress = email;
   this.phoneNumber = phone;
+  this.addresses = [];
+}
+
+function Address(street, city, state) {
+  this.street = street;
+  this.city = city;
+  this.state = state;
 }
 
 Contact.prototype.fullName = function() {
   return this.firstName + " " + this.lastName;
 }
+
 
 // user interface logic
 $(document).ready(function() {
